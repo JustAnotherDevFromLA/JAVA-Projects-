@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 import java.util.ArrayList;
 
-public class Main {
+public class BlackJackGame {
 	
 	
 	public static void main(String [] args) {
