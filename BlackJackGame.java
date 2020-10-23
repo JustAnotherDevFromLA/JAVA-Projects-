@@ -12,7 +12,7 @@ public class BlackJackGame {
 	System.out.println("");
 	}
 	
-	public static void displayMenu(){
+	public static void displayMenu(){	
 		int userInput = 0;
 		int userHandInput = 0;
 		int deck[] = {'2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A','2','3','4','5','6','7','8','9','T','J','Q','K','A'};		
@@ -21,18 +21,18 @@ public class BlackJackGame {
 		int playerHandSum = 0;
 		int casinoHandSum = 0;
 		int minBet = 20;
-		double playerWallet = 1000;
+		double playerWallet = 1000;	#initiate variables 
 		
 		
-		Random rand = new Random();
+		Random rand = new Random();	#create new objects 
 		ArrayList<String> playerHand = new ArrayList<String>();
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Welcome to Casino Royale BLACKJACK Table");
-		System.out.println("Minimum wager is: $" + minBet);
+		System.out.println("Welcome to Casino Royale BLACKJACK Table");	#prompt for user
+		System.out.println("Minimum wager is: $" + minBet);	
 		
 		do{
-			if(playerHand.size() == 0){
+			if(playerHand.size() == 0){	#if statment for dealing 2 cars for the first iteration
 				System.out.println("What would you like to do? Please make a selection!");
 				System.out.println("1) Play a hand");
 				System.out.println("2) Change the bet amount");
@@ -72,9 +72,9 @@ public class BlackJackGame {
 					playerHand.add("A");
 						
 					
-				deck = removeTheElement(deck,cardSelector);
+				deck = removeTheElement(deck,cardSelector); 
 				
-				if(playerHand.size() >=2) {
+				if(playerHand.size() >=2) {	
 					System.out.println("Your are dealt the following Hand: " );
 					System.out.println(playerHand);
 					
@@ -112,7 +112,7 @@ public class BlackJackGame {
 		 
 	
 	}
-	public static int[] removeTheElement(int[] arr,  
+	public static int[] removeTheElement(int[] arr,  	#function for removing a card once it is dealt 
              int index) 
 	{ 
 	if (arr == null || index < 0 || index >= arr.length) { 
